@@ -1,8 +1,7 @@
 name: mahjong_score
-description: A new Flutter package project.
+description: for calculating mahjong points.
 version: 0.0.1
-author:
-homepage:
+repository: https://github.com/northfieldzz/flutter_mahjong_score
 
 environment:
   sdk: ">=2.7.0 <3.0.0"
