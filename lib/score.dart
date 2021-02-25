@@ -10,13 +10,13 @@ class Score {
   final bool isPicked;
 
   /// 連荘している回数
-  final int noMoreReaderCount;
+  final int consecutivelyCount;
 
   Score({
     this.abstractPoint,
     this.isHost,
     this.isPicked,
-    this.noMoreReaderCount,
+    this.consecutivelyCount,
   });
 
   bool get isUniform => isHost;
@@ -36,19 +36,19 @@ class Score {
   num get point => _ceil(sumPoint);
 
   /// 親の受け取れる点数
-  int get hostPoint => payOtherPoint * 3 + (300 * noMoreReaderCount);
+  int get hostPoint => payOtherPoint * 3 + (300 * consecutivelyCount);
 
   /// 親の支払い点数(ツモのときの点数)
-  int get payHostPoint => _ceil(abstractPoint * 2) + (100 * noMoreReaderCount);
+  int get payHostPoint => _ceil(abstractPoint * 2) + (100 * consecutivelyCount);
 
   /// 子の受け取れる点数
   int get otherPoint {
-    return payOtherPoint * 2 + payHostPoint + (300 * noMoreReaderCount);
+    return payOtherPoint * 2 + payHostPoint + (300 * consecutivelyCount);
   }
 
   /// 子の支払い点数(ツモのときの点数)
   int get payOtherPoint {
-    return _ceil(isHost ? sumPoint / 3 : _point) + (100 * noMoreReaderCount);
+    return _ceil(isHost ? sumPoint / 3 : _point) + (100 * consecutivelyCount);
   }
 
   /// 100点以下の点数はすべて切り上げする

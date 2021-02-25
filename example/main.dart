@@ -7,7 +7,7 @@ import 'package:mahjong_score/score.dart';
 class PointSelector extends StatelessWidget {
   final bool isHost;
   final bool isPicked;
-  final int noMoreReaderCount;
+  final int consecutivelyCount;
   final List<int> hus = [20, 25, 30, 40, 50, 60, 70];
   final List<int> hons = [1, 2, 3, 4];
   final List<int> specialHans = [5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
@@ -15,7 +15,7 @@ class PointSelector extends StatelessWidget {
   PointSelector({
     this.isHost,
     this.isPicked,
-    this.noMoreReaderCount,
+    this.consecutivelyCount,
   });
 
   String get playerGrade => isHost ? '親' : '子';
@@ -32,7 +32,7 @@ class PointSelector extends StatelessWidget {
           MahjongPointTable(
             isHost: isHost,
             isPicked: isPicked,
-            noMoreReaderCount: noMoreReaderCount,
+            noMoreReaderCount: consecutivelyCount,
           ),
           Expanded(
             child: ListView.builder(
@@ -42,7 +42,7 @@ class PointSelector extends StatelessWidget {
                   abstractPoint: FixedPointType.values[i].detail,
                   isHost: isHost,
                   isPicked: isPicked,
-                  noMoreReaderCount: noMoreReaderCount,
+                  consecutivelyCount: consecutivelyCount,
                 );
                 return ListTile(
                   title: Text(score.toString()),
@@ -95,7 +95,7 @@ class MahjongPointTable extends StatelessWidget {
                   abstractPoint: BasePoint(hu: hu, fan: fans[index]),
                   isHost: isHost,
                   isPicked: isPicked,
-                  noMoreReaderCount: noMoreReaderCount,
+                  consecutivelyCount: noMoreReaderCount,
                 );
                 if (score.isNotDisplay) {
                   return Container();
