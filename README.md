@@ -4,13 +4,6 @@ It is a package that calculates the score of Mahjong.
 Scores are calculated based on "hu" and "fan".
 It should be noted that this package does not distribute points to each player, so you need to implement it yourself.
 
-## Installation
-
-```yaml
-dependencies:
-    mahjong_score: <version>
-```
-
 ## Usage
 
 ### BasePoint class
