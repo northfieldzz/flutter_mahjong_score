@@ -1,3 +1,9 @@
-## [0.0.1] - TODO: Add release date.
+## [0.0.2] - 2021/02/25
 
-* TODO: Describe initial release.
+* Change to README.md
+* Rename 'noMoreReaderCount' -> consecutivelyCount
+* Add example script
+
+## [0.0.1] - 2021/02/21
+
+* Initial Open Source release.
