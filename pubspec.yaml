@@ -1,5 +1,8 @@
 name: mahjong_score
-description: for calculating mahjong points.
+description:
+  It is a package that calculates the score of Mahjong.
+  Scores are calculated based on "hu" and "fan".
+  It should be noted that this package does not distribute points to each player, so you need to implement it yourself.
 version: 0.0.1
 repository: https://github.com/northfieldzz/flutter_mahjong_score
 
