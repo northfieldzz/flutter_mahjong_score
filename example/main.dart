@@ -1,9 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
-import 'base.dart';
-import 'fixed.dart';
-import 'score.dart';
+import 'package:mahjong_score/base.dart';
+import 'package:mahjong_score/fixed.dart';
+import 'package:mahjong_score/score.dart';
 
 class PointSelector extends StatelessWidget {
   final bool isHost;
