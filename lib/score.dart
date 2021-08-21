@@ -30,10 +30,10 @@ class Score {
   num get _point => abstractPoint * (isHost ? 1.5 : 1);
 
   /// 合計点数(切り上げ前)
-  num get sumPoint => _point * 4;
+  int get sumPoint => _point * 4;
 
   /// 合計点数(ロンのときの点数)
-  num get point => _ceil(sumPoint);
+  int get point => _ceil(sumPoint);
 
   /// 親の受け取れる点数
   int get hostPoint => payOtherPoint * 3 + (300 * consecutivelyCount);
