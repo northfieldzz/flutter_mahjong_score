@@ -1,6 +1,6 @@
 name: mahjong_score
 description: It is a package that calculates the score of Mahjong.
-version: 0.0.4
+version: 0.0.5
 repository: https://github.com/northfieldzz/flutter_mahjong_score
 
 environment:

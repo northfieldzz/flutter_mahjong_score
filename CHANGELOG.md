@@ -1,3 +1,8 @@
+## [0.0.5] - 2021/08/22
+
+* Supports null safety
+* Update Pubspec version
+
 ## [0.0.4] - 2021/08/22
 
 * Update Change Logs
