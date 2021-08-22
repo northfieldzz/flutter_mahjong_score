@@ -8,7 +8,7 @@ class FixedPoint extends AbstractPoint {
   @override
   final int point;
 
-  FixedPoint({this.point, String name}) : super(name: name);
+  FixedPoint({required String name, required this.point}) : super(name: name);
 }
 
 /// 固定値点数
@@ -40,5 +40,5 @@ extension FixedPointExtension on FixedPointType {
   };
 
   /// 点数
-  FixedPoint get detail => details[this];
+  FixedPoint get detail => details[this]!;
 }

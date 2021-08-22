@@ -5,9 +5,9 @@ import 'package:mahjong_score/fixed.dart';
 import 'package:mahjong_score/score.dart';
 
 class PointSelector extends StatelessWidget {
-  final bool isHost;
-  final bool isPicked;
-  final int consecutivelyCount;
+  final bool? isHost;
+  final bool? isPicked;
+  final int? consecutivelyCount;
   final List<int> hus = [20, 25, 30, 40, 50, 60, 70];
   final List<int> hons = [1, 2, 3, 4];
   final List<int> specialHans = [5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
@@ -18,9 +18,9 @@ class PointSelector extends StatelessWidget {
     this.consecutivelyCount,
   });
 
-  String get playerGrade => isHost ? '親' : '子';
+  String get playerGrade => isHost! ? '親' : '子';
 
-  String get finishMethod => isPicked ? 'ツモ' : 'ロン';
+  String get finishMethod => isPicked! ? 'ツモ' : 'ロン';
 
   @override
   Widget build(BuildContext context) {
@@ -39,7 +39,7 @@ class PointSelector extends StatelessWidget {
               itemCount: FixedPointType.values.length,
               itemBuilder: (context, i) {
                 final score = Score(
-                  abstractPoint: FixedPointType.values[i].detail,
+                  basePoint: FixedPointType.values[i].detail,
                   isHost: isHost,
                   isPicked: isPicked,
                   consecutivelyCount: consecutivelyCount,
@@ -58,9 +58,9 @@ class PointSelector extends StatelessWidget {
 }
 
 class MahjongPointTable extends StatelessWidget {
-  final bool isHost;
-  final bool isPicked;
-  final int noMoreReaderCount;
+  final bool? isHost;
+  final bool? isPicked;
+  final int? noMoreReaderCount;
   final List<int> hus = [20, 25, 30, 40, 50, 60, 70];
   final List<int> fans = [1, 2, 3, 4];
   final List<int> specialHans = [5, 6, 7, 8, 9, 10, 11, 12, 13, 14];
@@ -92,7 +92,7 @@ class MahjongPointTable extends StatelessWidget {
               _buildBodyCell('$hu'),
               ...List.generate(fans.length, (index) {
                 final score = Score(
-                  abstractPoint: BasePoint(hu: hu, fan: fans[index]),
+                  basePoint: BasePoint(hu: hu, fan: fans[index]),
                   isHost: isHost,
                   isPicked: isPicked,
                   consecutivelyCount: noMoreReaderCount,

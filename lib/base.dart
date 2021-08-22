@@ -7,10 +7,16 @@ import 'fixed.dart';
 ///
 /// 符、翻から求めた点計算の基底となるポイント
 class BasePoint extends AbstractPoint {
-  BasePoint({int hu, int fan}) : super(hu: hu, fan: fan);
+  /// 符
+  final int hu;
+
+  /// 翻
+  final int fan;
+
+  BasePoint({required this.hu, required this.fan}) : super();
 
   @override
-  num get point {
+  int get point {
     var _hu = hu;
 
     // 平和、七対子の符は切り上げを無視
@@ -19,7 +25,7 @@ class BasePoint extends AbstractPoint {
     }
 
     // メインの点数計算式
-    var _point = _hu * 4 * pow(2, fan);
+    int _point = (_hu * 4 * pow(2, fan)).toInt();
 
     // 満貫になる点数は満貫の固定値点数を与える
     if (_point >= 2240) {
