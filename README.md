@@ -1,4 +1,6 @@
 # mahjong_score
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fnorthfieldzz%2Fflutter_mahjong_score.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fnorthfieldzz%2Fflutter_mahjong_score?ref=badge_shield)
+
 
 It is a package that calculates the score of Mahjong.
 Scores are calculated based on "hu" and "fan".
@@ -51,3 +53,6 @@ final score = Score(
 |isHost|Whether the winner is a parent|
 |isPicked|The winner end with'Tsumo'|
 |consecutivelyCount|Number of consecutive Hosts|
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fnorthfieldzz%2Fflutter_mahjong_score.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fnorthfieldzz%2Fflutter_mahjong_score?ref=badge_large)
